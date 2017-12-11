@@ -71,12 +71,20 @@ var AndroidWebView = createClass({
             [data]
         );
     },
+    onMessage: function(event) {
+        if (this.props.onMessage) {
+            this.props.onMessage(event);
+        }
+    },
     render: function() {
-        return <RNAndroidWebView ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} />;
+        return <RNAndroidWebView ref={WEBVIEW_REF}
+                                 {...this.props}
+                                 onMessage={this.onMessage}
+                                 onNavigationStateChange={this._onNavigationStateChange} />;
     },
     _getWebViewHandle: function() {
         return RN.findNodeHandle(this.refs[WEBVIEW_REF]);
-    },
+    }
 });
 
 var RNAndroidWebView = requireNativeComponent('RNAndroidWebView', null);
