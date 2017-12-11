@@ -195,8 +195,7 @@ public class WebViewManager extends SimpleViewManager<WebView> {
             mReactWebViewClient = (ReactWebViewClient) client;
         }
 
-        public @Nullable
-        ReactWebViewClient getReactWebViewClient() {
+        public @Nullable ReactWebViewClient getReactWebViewClient() {
             return mReactWebViewClient;
         }
 
