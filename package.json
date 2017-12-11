@@ -1,0 +1,13 @@
+{
+  "name": "react-native-android-wv-video",
+  "version": "1.0.0",
+  "description": "Android WebView supporting playing HTML5 videos in fullscreen",
+  "main": "index.js",
+  "peerDependencies": {
+    "react-native": "^0.51.0"
+  },
+  "repository": "https://github.com/antonkulyk/react-native-android-wv-video.git",
+  "homepage": "https://github.com/antonkulyk/react-native-android-wv-video",
+  "author": "Anton Kulyk <kuliks.anton@gmail.com>",
+  "license": "MIT"
+}
