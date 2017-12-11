@@ -79,6 +79,7 @@ var AndroidWebView = createClass({
     render: function() {
         return <RNAndroidWebView ref={WEBVIEW_REF}
                                  {...this.props}
+                                 messagingEnabled={typeof this.props.onMessage === 'function'}
                                  onMessage={this.onMessage}
                                  onNavigationStateChange={this._onNavigationStateChange} />;
     },
