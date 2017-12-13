@@ -8,7 +8,8 @@ var ReactNative, {
     ViewPropTypes,
     EdgeInsetsPropType,
     UIManager,
-    StyleSheet
+    StyleSheet,
+    findNodeHandle
 } = require('react-native');
 var PropTypes = require('prop-types');
 
@@ -234,7 +235,7 @@ class WebView extends React.Component {
     };
 
     getWebViewHandle = () => {
-        return ReactNative.findNodeHandle(this.refs[WEBVIEW_REF]);
+        return findNodeHandle(this.refs[WEBVIEW_REF]);
     };
 
     onLoadingStart = (event) => {
